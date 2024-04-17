@@ -1,3 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/*
+<uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 900
+
+.work-sans-<uniquifier> {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+:root {
+    --error: #92140C;
+    --primary: #575366;
+    --secondary: #6E7DAB;
+    --success: #5762D5;
+    --vert: #D1E3DD;
+
+    --white: #ffffff;
+    --black: #252525;
+
+    --check_green: #00FF29;
+    --check_yellow: #FFD600;
+    --check_red: #FF0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--black);
+    font-family: "Work Sans", sans-serif;
+}
+
+.container {
+    margin: auto;
+    margin-top: 3em;
+    max-width: calc(100% - 50px);
+}
+
+.fw {font-weight: bolder}
+.fr {font-weight: normal}
+
+h1 {
+    font-size: 2em;
+}
+
+
+.btn {
+    color: var(--white);
+    padding: .5em;
+
+}
+
+.btn_primary_profile {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    border-radius: 10px;
+    background-color: var(--secondary);
+}
+
+/*  ##################################################  */
