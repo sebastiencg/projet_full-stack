@@ -15,7 +15,7 @@
     <div class="container_content_actionProfil">
       <div class="w-[calc(100%)]">
         <h2 class="fw text-start mb-3">Purchases</h2>
-        <a class="btn btn_primary_profile" href="">means of payment</a>
+        <a class="btn btn_primary btn_primary_profile" href="">means of payment</a>
       </div>
 
 

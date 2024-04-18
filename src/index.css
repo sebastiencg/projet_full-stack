@@ -63,12 +63,17 @@ h1 {
 
 }
 
-.btn_primary_profile {
+.btn_primary {
+    text-align: center;
     width: 100%;
     display: flex;
-    justify-content: start;
     border-radius: 10px;
     background-color: var(--secondary);
+}
+
+.btn_primary_profile {
+    width: 100%;
+    justify-content: start;
 }
 
 /*  ##################################################  */
