@@ -4,6 +4,7 @@ import TicketComponent from "@/components/TicketComponent.vue";
 import ArtistComponent from "@/components/ArtistComponent.vue";
 import ProfileComponent from "@/components/ProfileComponent.vue";
 import SponsorshipComponent from "@/components/SponsorshipComponent.vue";
+import VenueCreateComponent from "@/components/VenueCreateComponent.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -34,6 +35,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/sponsor',
     name: 'sponsor',
     component: SponsorshipComponent
+  },
+  {
+    path: '/venue/create',
+    name: 'venue/create',
+    component: VenueCreateComponent
   },
 ]
 

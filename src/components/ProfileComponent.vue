@@ -25,7 +25,7 @@
           <a class="btn btn_primary_profile" href="">terms of use</a>
           <a class="btn btn_primary_profile" href="/sponsor">Sponsorship</a>
           <a class="btn btn_primary_profile" href="">Themes</a>
-          <a class="btn btn_primary_profile" href="">create venue</a>
+          <a class="btn btn_primary_profile" href="/venue/create">create venue</a>
           <a class="btn btn_primary_profile" href="">followed artist</a>
           <a class="btn btn_primary_profile" href="">Event</a>
         </div>
@@ -73,5 +73,14 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+
+
+.btn_primary_profile {
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  background-color: var(--secondary);
+  justify-content: start;
 }
 </style>

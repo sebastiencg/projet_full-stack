@@ -64,16 +64,16 @@ h1 {
 }
 
 .btn_primary {
-    text-align: center;
     width: 100%;
     display: flex;
     border-radius: 10px;
     background-color: var(--secondary);
 }
 
-.btn_primary_profile {
-    width: 100%;
-    justify-content: start;
-}
+
+.text-align-start {text-align: start;}
+.text-align-center {text-align: center;}
+.text-align-end {text-align: end;}
+
 
 /*  ##################################################  */
