@@ -15,7 +15,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body{
+    background-color: #D1E3DD;
+    font-family: "Work Sans";
+}
 
 :root {
     --error: #92140C;
@@ -44,8 +47,7 @@ body {
 }
 
 .container {
-    margin: auto;
-    margin-top: 3em;
+    margin: 3em auto auto;
     max-width: calc(100% - 50px);
 }
 

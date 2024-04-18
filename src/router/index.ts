@@ -9,6 +9,9 @@ import LoginForm from "@/components/LoginForm.vue";
 import RegisterForm from "@/components/RegisterForm.vue";
 import LogoutUser from "@/components/LogoutUser.vue";
 import PaymentComponent from "@/components/PaymentComponent.vue";
+import TicketsComponent from "@/components/TicketsComponent.vue";
+import SuccessComponent from "@/components/SuccessComponent.vue";
+import DonationComponent from "@/components/DonationComponent.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -21,9 +24,9 @@ const routes: Array<RouteRecordRaw> = [
     // component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
-    path: '/ticket',
-    name: 'ticket',
-    component: TicketComponent
+    path: '/tickets',
+    name: 'tickets',
+    component: TicketsComponent
   },
   {
     path: '/artist',
@@ -60,8 +63,24 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/payment",
     component: PaymentComponent
-  }
-]
+  },
+  {
+    path: '/ticket',
+    name: 'ticket',
+    component: TicketComponent
+  },
+  {
+    path: '/success',
+    name: 'success',
+    component: SuccessComponent
+  },
+  {
+    path: '/donation',
+    name: 'donation',
+    component: DonationComponent
+
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
