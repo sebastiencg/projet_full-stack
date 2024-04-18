@@ -1,5 +1,5 @@
 <template>
-  <div style="height:90vh;">
+  <div class="map" style="height:55vh;">
     <l-map ref="map" v-model:zoom="zoom" :center="[45.75, 5.15]">
       <l-tile-layer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -9,16 +9,125 @@
     </l-map>
   </div>
   <div class="eventList">
+    <div class="card">
+      <div class="top">
+        <div class="topLeft">
+          <span class="name">Le perroquet bourré</span>
+        </div>
+        <div class="color">
+          <div class="pill">
 
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="left">
+          <span class="price">12,3$</span>
+          <p class="artist">
+            <span class="title">Headlining</span>
+            <span class="headName"><i>Pierre Lacroix</i></span>
+            <span class="duration"><i>8:00min</i></span>
+          </p>
+        </div>
+        <div class="right">
+          <span class="available">
+            <font-awesome-icon :icon="faCircleCheck()" style="color:var(--vert);" />
+            4 seat Available
+          </span>
+          <span class="total">
+            <u>estimated time: 1H45</u>
+          </span>
+          <span class="distance">
+            4km away from you
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="top">
+        <div class="topLeft">
+          <span class="name">Le perroquet bourré</span>
+        </div>
+        <div class="color">
+          <div class="pill">
+
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="left">
+          <span class="price">12,3$</span>
+          <p class="artist">
+            <span class="title">Headlining</span>
+            <span class="headName"><i>Pierre Lacroix</i></span>
+            <span class="duration"><i>8:00min</i></span>
+          </p>
+        </div>
+        <div class="right">
+          <span class="available">
+            <font-awesome-icon :icon="faCircleCheck()" style="color:var(--vert);" />
+            4 seat Available
+          </span>
+          <span class="total">
+            <u>estimated time: 1H45</u>
+          </span>
+          <span class="distance">
+            4km away from you
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="top">
+        <div class="topLeft">
+          <span class="name">Le perroquet bourré</span>
+        </div>
+        <div class="color">
+          <div class="pill">
+
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="left">
+          <span class="price">12,3$</span>
+          <p class="artist">
+            <span class="title">Headlining</span>
+            <span class="headName"><i>Pierre Lacroix</i></span>
+            <span class="duration"><i>8:00min</i></span>
+          </p>
+        </div>
+        <div class="right">
+          <span class="available">
+            <font-awesome-icon :icon="faCircleCheck()" style="color:var(--vert);" />
+            4 seat Available
+          </span>
+          <span class="total">
+            <u>estimated time: 1H45</u>
+          </span>
+          <span class="distance">
+            4km away from you
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import "leaflet/dist/leaflet.css";
 import { LMap, LTileLayer } from "@vue-leaflet/vue-leaflet";
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import {faCircleCheck} from "@fortawesome/free-solid-svg-icons";
 
 export default {
+  methods: {
+    faCircleCheck() {
+      return faCircleCheck
+    }
+  },
   components: {
+    FontAwesomeIcon,
     LMap,
     LTileLayer,
   },
@@ -31,10 +140,130 @@ export default {
 </script>
 
 <style scoped>
+
+.map{
+  position: relative;
+  z-index: 1;
+}
+
 .eventList{
-  height: 30vh;
+  padding-top: 5vh;
+  z-index: 10;
+  position: fixed;
+  bottom: 10vh;
+  height: 40vh;
   width: 100%;
-  background-color: black;
+  background-color: #D1E3DD;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  overflow: scroll;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  background-color: #575366;
+  height: 20vh;
+  width: 90%;
+  border-radius: 25px;
+  margin-bottom: 5vh;
+}
+
+.top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.topLeft{
+  background-color: var(--vert);
+  border: 1px solid var(--black);
+  border-top-left-radius: 25px;
+  height: 5vh;
+  width: 45vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pill{
+  height: 4vh;
+  width: 4vh;
+  border-radius: 100%;
+  background-color: var(--check_yellow);
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+}
+
+.artist{
+  display: flex;
+  flex-direction: column;
+}
+
+.price{
+  font-size: 18px;
+  color: white;
+}
+
+.title{
+  font-size: 12px;
+  color: white;
+}
+
+.headName+.duration{
+  font-size: 13px;
+}
+
+.headName{
+  color: #D4D4D4;
+}
+
+.duration{
+  color: #A8A8A8;
+}
+
+.left{
+  width: 40%;
+  padding-left: 20px;
+  padding-top: 10px;
+  height: 15vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+}
+
+.right{
+  width: 60%;
+  padding-left: 20px;
+  padding-top: 10px;
+  height: 15vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.available{
+  color: #D4D4D4;
+}
+
+.total{
+  font-size: 12px;
+
+  text-transform: uppercase;
+  color: white;
+}
+
+.distance{
+  font-size: 12px;
+  color: white;
 }
 
 </style>

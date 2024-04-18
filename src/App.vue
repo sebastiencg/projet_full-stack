@@ -19,6 +19,7 @@
 
 
 nav {
+  border-top: 1px solid black;
   gap: 1em;
   display: flex;
   align-items: center;
