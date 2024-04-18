@@ -1,10 +1,10 @@
 <template>
   <router-view/>
   <nav>
-    <router-link to="/"><i class="fa-solid fa-house-chimney"></i>Home</router-link>
-    <router-link to="/ticket"><i class="fa-solid fa-ticket"></i>Ticket</router-link>
-    <router-link to="/artist"><i class="fa-solid fa-user-group"></i>Artist</router-link>
-    <router-link to="/profile"><i class="fa-solid fa-user"></i>Profile</router-link>
+    <router-link class="routerLink" to="/"><i class="fa-solid fa-house-chimney"></i><font-awesome-icon :icon="faHouse"/>Home</router-link>
+    <router-link class="routerLink" to="/tickets"><i class="fa-solid fa-ticket"></i><font-awesome-icon :icon="faTicket"/>Ticket</router-link>
+    <router-link class="routerLink" to="/artist"><i class="fa-solid fa-user-group"></i><font-awesome-icon :icon="faUserGroup"/>Artist</router-link>
+    <router-link class="routerLink" to="/profile"><i class="fa-solid fa-user"></i><font-awesome-icon :icon="faCircleUser"/>Profile</router-link>
   </nav>
 </template>
 
@@ -22,7 +22,7 @@ nav {
   gap: 1em;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 
   width: 100%;
   color: var(--white);
@@ -43,6 +43,13 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+.routerLink{
+  display: flex;
+  flex-direction: column;
+}
 </style>
 <script setup lang="ts">
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import {faCircleUser, faHouse, faTicket, faUserGroup} from "@fortawesome/free-solid-svg-icons";
 </script>
