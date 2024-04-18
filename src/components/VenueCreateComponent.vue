@@ -9,17 +9,17 @@ export default defineComponent({
   data() {
     return {
       venueData: {
-        placeName: '',
-        siret: '',
+        name: '',
+        SIRET: 0,
         email: '',
         address: '',
-        numberPlace: 0
+        seatCapacity: 0
       } as {
-        placeName: string;
-        siret: string;
+        name: string;
+        SIRET: number;
         email: string;
         address: string;
-        numberPlace: number;
+        seatCapacity: number;
       }
     };
   },
@@ -35,11 +35,11 @@ export default defineComponent({
     },
     resetForm() {
       this.venueData = {
-        placeName: '',
-        siret: '',
+        name: '',
+        SIRET: 0,
         email: '',
         address: '',
-        numberPlace: 0
+        seatCapacity: 0
       };
     }
   }
@@ -57,11 +57,11 @@ export default defineComponent({
         <div class="div_create_venue">
           <div class="">
             <label for="placeName">Place’s name</label>
-            <input type="text" id="placeName" v-model="venueData.placeName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="JeanJean Place" required />
+            <input type="text" id="placeName" v-model="venueData.name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="JeanJean Place" required />
           </div>
           <div class="">
             <label for="siret">SIRET number</label>
-            <input type="text" pattern="[0-9]*" inputmode="numeric" id="siret" v-model="venueData.siret" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="1234 5678 9012" required />
+            <input type="text" pattern="[0-9]*" inputmode="numeric" id="siret" v-model="venueData.SIRET" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="1234 5678 9012" required />
           </div>
           <div class="">
             <label for="email">Email</label>
@@ -72,8 +72,8 @@ export default defineComponent({
             <input type="text" id="address" v-model="venueData.address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="5 rue des pommes" required />
           </div>
           <div class="">
-            <label for="numberPlace">Number of places</label>
-            <input type="number" id="numberPlace" v-model.number="venueData.numberPlace" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="15" required />
+            <label for="seatCapacity">Seat Capacity</label>
+            <input type="number" id="seatCapacity" v-model.number="venueData.seatCapacity" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="15" required />
           </div>
         </div>
         <button type="submit" class="btn btn_primary mt-5 text-align-center">Create a place</button>
