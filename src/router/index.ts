@@ -5,6 +5,10 @@ import ArtistComponent from "@/components/ArtistComponent.vue";
 import ProfileComponent from "@/components/ProfileComponent.vue";
 import SponsorshipComponent from "@/components/SponsorshipComponent.vue";
 import VenueCreateComponent from "@/components/VenueCreateComponent.vue";
+import LoginForm from "@/components/LoginForm.vue";
+import RegisterForm from "@/components/RegisterForm.vue";
+import LogoutUser from "@/components/LogoutUser.vue";
+import PaymentComponent from "@/components/PaymentComponent.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -41,6 +45,22 @@ const routes: Array<RouteRecordRaw> = [
     name: 'venue/create',
     component: VenueCreateComponent
   },
+  {
+    path: "/login",
+    component: LoginForm
+  },
+  {
+    path: "/register",
+    component: RegisterForm
+  },
+  {
+    path: "/logout",
+    component: LogoutUser
+  },
+  {
+    path: "/payment",
+    component: PaymentComponent
+  }
 ]
 
 const router = createRouter({

@@ -11,11 +11,9 @@ const handleSubmit = async () => {
   console.log('Password:', password.value);
   try {
     const response = await login();
-    if(response.data.status === 200) {
-      localStorage.setItem('token', JSON.stringify(response.data));
-      await router.push('/login');
+    localStorage.setItem('bearerToken', response.data.token);
+    await router.push('/login');
 
-    }
   } catch (error) {
     console.error("Erreur lors du login :", error);
   }
@@ -28,7 +26,7 @@ const login = async () => {
       email: email.value,
       password: password.value
     });
-    console.log(response)
+    localStorage.setItem('bearerToken', response.data.token);
     return response;
   } catch (error) {
     console.error("Erreur lors de la requête POST :", error);
