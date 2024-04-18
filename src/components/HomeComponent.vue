@@ -9,40 +9,42 @@
     </l-map>
   </div>
   <div class="eventList">
-    <div class="card">
-      <div class="top">
-        <div class="topLeft">
-          <span class="name">Le perroquet bourré</span>
-        </div>
-        <div class="color">
-          <div class="pill">
+    <a href="/event/show">
+      <div class="card">
+        <div class="top">
+          <div class="topLeft">
+            <span class="name">Le perroquet bourré</span>
+          </div>
+          <div class="color">
+            <div class="pill">
 
+            </div>
           </div>
         </div>
-      </div>
-      <div class="content">
-        <div class="left">
-          <span class="price">12,3$</span>
-          <p class="artist">
-            <span class="title">Headlining</span>
-            <span class="headName"><i>Pierre Lacroix</i></span>
-            <span class="duration"><i>8:00min</i></span>
-          </p>
-        </div>
-        <div class="right">
+        <div class="content">
+          <div class="left">
+            <span class="price">12,3$</span>
+            <p class="artist">
+              <span class="title">Headlining</span>
+              <span class="headName"><i>Pierre Lacroix</i></span>
+              <span class="duration"><i>8:00min</i></span>
+            </p>
+          </div>
+          <div class="right">
           <span class="available">
             <font-awesome-icon :icon="faCircleCheck()" style="color:var(--vert);" />
             4 seat Available
           </span>
-          <span class="total">
+            <span class="total">
             <u>estimated time: 1H45</u>
           </span>
-          <span class="distance">
+            <span class="distance">
             4km away from you
           </span>
+          </div>
         </div>
       </div>
-    </div>
+    </a>
     <div class="card">
       <div class="top">
         <div class="topLeft">
@@ -264,6 +266,11 @@ export default {
 .distance{
   font-size: 12px;
   color: white;
+}
+
+a{
+  margin-left: 5vh;
+  width: 100%;
 }
 
 </style>

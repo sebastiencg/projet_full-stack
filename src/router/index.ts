@@ -12,6 +12,8 @@ import PaymentComponent from "@/components/PaymentComponent.vue";
 import TicketsComponent from "@/components/TicketsComponent.vue";
 import SuccessComponent from "@/components/SuccessComponent.vue";
 import DonationComponent from "@/components/DonationComponent.vue";
+import EventShowComponent from "@/components/EventShowComponent.vue";
+import VenueIndexComponent from "@/components/VenueIndexComponent.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -79,6 +81,16 @@ const routes: Array<RouteRecordRaw> = [
     name: 'donation',
     component: DonationComponent
 
+  },
+  {
+    path: '/venue',
+    name: 'venueAll',
+    component: VenueIndexComponent
+  },
+  {
+    path: '/event/show',
+    name: 'eventShow',
+    component: EventShowComponent
   },
 ];
 

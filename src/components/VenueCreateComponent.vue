@@ -50,7 +50,7 @@ export default defineComponent({
   <div class="container">
     <div class="">
       <h1 class="">Register a venue</h1>
-      <a href="/profile">return</a>
+      <a href="/venue">return</a>
     </div>
     <div class="mt-10">
       <form class="form_create_venue" @submit.prevent="createVenue">

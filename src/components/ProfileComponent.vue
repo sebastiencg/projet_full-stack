@@ -25,7 +25,7 @@
           <a class="btn btn_primary_profile" href="">terms of use</a>
           <a class="btn btn_primary_profile" href="/sponsor">Sponsorship</a>
           <a class="btn btn_primary_profile" href="">Themes</a>
-          <a class="btn btn_primary_profile" href="/venue/create">create venue</a>
+          <a class="btn btn_primary_profile" href="/venue">venue index</a>
           <a class="btn btn_primary_profile" href="">followed artist</a>
           <a class="btn btn_primary_profile" href="">Event</a>
         </div>
