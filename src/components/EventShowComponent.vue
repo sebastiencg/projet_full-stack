@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import {faBasketShopping, faCircleCheck} from "@fortawesome/free-solid-svg-icons";
+import {faBasketShopping, faCircleCheck, faCircleXmark} from "@fortawesome/free-solid-svg-icons";
 
 
 </script>
@@ -48,7 +48,111 @@ import {faBasketShopping, faCircleCheck} from "@fortawesome/free-solid-svg-icons
         </ul>
       </div>
 
-      <hr>
+      <hr class="bg_line_dark">
+
+      <div class="card">
+        <div class="top">
+          <div class="topLeft">
+            <span class="name">Bistrot fringuant</span>
+          </div>
+          <div class="color">
+            <div class="pill bg_pill_red">
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="left">
+            <span class="price">16,40$</span>
+            <p class="artist">
+              <span class="title">Headlining</span>
+              <span class="headName"><i>surprise guest</i></span>
+              <span class="duration"><i>15:00min</i></span>
+            </p>
+          </div>
+          <div class="right">
+          <span class="available">
+            <font-awesome-icon :icon="faCircleXmark" style="color:var(--vert);" />
+            0 seat Available
+          </span>
+            <span class="total">
+            <u>estimated time: 1H23</u>
+          </span>
+            <span class="distance">
+            12km away from you
+          </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="top">
+          <div class="topLeft">
+            <span class="name">Fnac Bellecour</span>
+          </div>
+          <div class="color">
+            <div class="pill bg_pill_green">
+
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="left">
+            <span class="price">7,30$</span>
+            <p class="artist">
+              <span class="title">Headlining</span>
+              <span class="headName"><i>Pauline Jolie</i></span>
+              <span class="duration"><i>12:00min</i></span>
+            </p>
+          </div>
+          <div class="right">
+          <span class="available">
+            <font-awesome-icon :icon="faCircleCheck" style="color:var(--vert);" />
+            12 seat Available
+          </span>
+            <span class="total">
+            <u>estimated time: 1H14</u>
+          </span>
+            <span class="distance">
+            5km away from you
+          </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="top">
+          <div class="topLeft">
+            <span class="name">Le Jean Jean</span>
+          </div>
+          <div class="color">
+            <div class="pill bg_pill_yellow">
+
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="left">
+            <span class="price">9.99$</span>
+            <p class="artist">
+              <span class="title">Headlining</span>
+              <span class="headName"><i>Pierre Bernard</i></span>
+              <span class="duration"><i>14:00min</i></span>
+            </p>
+          </div>
+          <div class="right">
+          <span class="available">
+            <font-awesome-icon :icon="faCircleCheck" style="color:var(--vert);" />
+            1 seat Available
+          </span>
+            <span class="total">
+            <u>estimated time: 1H43</u>
+          </span>
+            <span class="distance">
+            3km away from you
+          </span>
+          </div>
+        </div>
+      </div>
 
     </div>
 
@@ -91,4 +195,109 @@ import {faBasketShopping, faCircleCheck} from "@fortawesome/free-solid-svg-icons
   justify-content: space-between;
 }
 
+
+
+
+.card{
+  display: flex;
+  flex-direction: column;
+  background-color: #575366;
+  height: 20vh;
+  width: 100%;
+  border-radius: 25px;
+  margin-bottom: 5vh;
+}
+
+.top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.topLeft{
+  background-color: var(--vert);
+  border: 1px solid var(--black);
+  border-top-left-radius: 25px;
+  height: 5vh;
+  width: 45vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pill{
+  height: 4vh;
+  width: 4vh;
+  border-radius: 100%;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+}
+
+.artist{
+  display: flex;
+  flex-direction: column;
+}
+
+.price{
+  font-size: 18px;
+  color: white;
+}
+
+.title{
+  font-size: 12px;
+  color: white;
+}
+
+.headName+.duration{
+  font-size: 13px;
+}
+
+.headName{
+  color: #D4D4D4;
+}
+
+.duration{
+  color: #A8A8A8;
+}
+
+.left{
+  width: 40%;
+  padding-left: 20px;
+  padding-top: 10px;
+  height: 15vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+}
+
+.right{
+  width: 60%;
+  padding-left: 20px;
+  padding-top: 10px;
+  height: 15vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.available{
+  color: #D4D4D4;
+}
+
+.total{
+  font-size: 12px;
+
+  text-transform: uppercase;
+  color: white;
+}
+
+.distance{
+  font-size: 12px;
+  color: white;
+}
 </style>

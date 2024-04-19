@@ -41,6 +41,10 @@
 
 <style scoped>
 
+.container{
+  height: 110vh;
+}
+
 .container-content_infoProfile {
   margin: 1em 0;
   gap: .3em;

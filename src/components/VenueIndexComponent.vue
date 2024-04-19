@@ -1,5 +1,28 @@
 <script lang="ts">
 
+import {faPenToSquare, faTrash} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+
+export default {
+  methods: {
+    faPenToSquare() {
+      return faPenToSquare
+    },
+    faTrash() {
+      return faTrash
+    }
+  },
+  components: {
+    FontAwesomeIcon,
+
+  },
+  data() {
+    return {
+      zoom: 10.3,
+    };
+  },
+};
+
 </script>
 
 <template>
@@ -15,29 +38,106 @@
 
       <div class="container_carteVenue">
 
-        <a class="carte_venueIndex" href="">
+        <div class="carte_venueIndex" >
           <div>
-            <h3 class="fw">Le jean jean</h3>
+            <h3 class="fw"><a href="">Le jean jean</a></h3>
           </div>
-        </a>
 
-        <a class="carte_venueIndex" href="">
-          <div>
-            <h3 class="fw">Perroquet bourré</h3>
-          </div>
-        </a>
 
-        <a class="carte_venueIndex" href="">
-          <div>
-            <h3 class="fw">Bistrot fringuant</h3>
-          </div>
-        </a>
+          <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
+              <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
+            </svg>
+          </button>
 
-        <a class="carte_venueIndex" href="">
-          <div>
-            <h3 class="fw">Fnac Bellecour</h3>
+          <!-- Dropdown menu -->
+          <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+              <li>
+                <a href="#" class="dropdownLink block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit<font-awesome-icon :icon="faPenToSquare()"/></a>
+              </li>
+            </ul>
+            <div class="py-2">
+              <a href="#" class="dropdownLink block px-4 py-2 text-sm text-gray-700 hover:bg-red-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Remove <font-awesome-icon :icon="faTrash()"/></a>
+            </div>
           </div>
-        </a>
+        </div>
+
+
+        <div class="carte_venueIndex" >
+          <div>
+            <h3 class="fw"><a href="">Le perroquet bourré</a></h3>
+          </div>
+
+
+          <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
+              <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
+            </svg>
+          </button>
+
+          <!-- Dropdown menu -->
+          <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+              <li>
+                <a href="#" class="dropdownLink block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit<font-awesome-icon :icon="faPenToSquare()"/></a>
+              </li>
+            </ul>
+            <div class="py-2">
+              <a href="#" class="dropdownLink block px-4 py-2 text-sm text-gray-700 hover:bg-red-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Remove <font-awesome-icon :icon="faTrash()"/></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carte_venueIndex" >
+          <div>
+            <h3 class="fw"><a href="">Le bistrot fringuant</a></h3>
+          </div>
+
+
+          <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
+              <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
+            </svg>
+          </button>
+
+          <!-- Dropdown menu -->
+          <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+              <li>
+                <a href="#" class="dropdownLink block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit<font-awesome-icon :icon="faPenToSquare()"/></a>
+              </li>
+            </ul>
+            <div class="py-2">
+              <a href="#" class="dropdownLink block px-4 py-2 text-sm text-gray-700 hover:bg-red-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Remove <font-awesome-icon :icon="faTrash()"/></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carte_venueIndex" >
+          <div>
+            <h3 class="fw"><a href="">Fnac Bellecour</a></h3>
+          </div>
+
+
+          <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
+              <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
+            </svg>
+          </button>
+
+          <!-- Dropdown menu -->
+          <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+              <li>
+                <a href="#" class="dropdownLink block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit<font-awesome-icon :icon="faPenToSquare()"/></a>
+              </li>
+            </ul>
+            <div class="py-2">
+              <a href="#" class="dropdownLink block px-4 py-2 text-sm text-gray-700 hover:bg-red-200 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Remove <font-awesome-icon :icon="faTrash()"/></a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="mt-20">
         <a class="btn btn_create_venue" href="/venue/create">create venue</a>
@@ -64,7 +164,9 @@
   text-align: start;
 
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   border-radius: 10px;
   background-color: var(--primary);
 }
@@ -75,5 +177,15 @@
   border-radius: 10px;
   background-color: var(--secondary);
   justify-content: start;
+}
+
+.dropdownLink{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+#dropdownMenuIconButton{
+  margin-right: 1vh;
 }
 </style>

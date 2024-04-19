@@ -158,7 +158,7 @@ export default {
   background-color: #D1E3DD;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  overflow: scroll;
+  overflow-y: scroll;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -269,7 +269,7 @@ export default {
 }
 
 a{
-  margin-left: 5vh;
+  margin-left: 10%;
   width: 100%;
 }
 

@@ -12,13 +12,15 @@
       <img src="" alt="">
     </div>
 
-    <div class="right">
-      <span class="artistName">Jeremy ferrrrary</span>
-      <div class="info">
-        <span class="entries">28 part.</span>
-        <span class="date">01/04/24</span>
+      <div class="right">
+        <a href="/artist/show">
+        <span class="artistName">Jeremy ferrrrary</span>
+        </a>
+        <div class="info">
+          <span class="entries">28 part.</span>
+          <span class="date">01/04/24</span>
+        </div>
       </div>
-    </div>
   </div>
 </template>
 
