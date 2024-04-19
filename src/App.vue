@@ -3,7 +3,7 @@
   <nav>
     <router-link class="routerLink" to="/"><i class="fa-solid fa-house-chimney"></i><font-awesome-icon :icon="faHouse"/>Home</router-link>
     <router-link class="routerLink" to="/tickets"><i class="fa-solid fa-ticket"></i><font-awesome-icon :icon="faTicket"/>Ticket</router-link>
-    <router-link class="routerLink" to="/artist"><i class="fa-solid fa-user-group"></i><font-awesome-icon :icon="faUserGroup"/>Artist</router-link>
+    <router-link class="routerLink" to="/artists"><i class="fa-solid fa-user-group"></i><font-awesome-icon :icon="faUserGroup"/>Artist</router-link>
     <router-link class="routerLink" to="/profile"><i class="fa-solid fa-user"></i><font-awesome-icon :icon="faCircleUser"/>Profile</router-link>
   </nav>
 </template>
