@@ -17,7 +17,7 @@
 
 body{
     background-color: #D1E3DD;
-    font-family: "Work Sans";
+    font-family: "Work Sans", serif;
 }
 
 :root {
@@ -77,5 +77,10 @@ h1 {
 .text-align-center {text-align: center;}
 .text-align-end {text-align: end;}
 
+.bg_pill_green {background-color: var(--check_green)}
+.bg_pill_yellow {background-color: var(--check_yellow)}
+.bg_pill_red {background-color: var(--check_red)}
+
+.bg_line_dark {border: .5px solid var(--black);}
 
 /*  ##################################################  */
