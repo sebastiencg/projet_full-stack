@@ -2,6 +2,7 @@
 import {ref} from 'vue';
 import axios from "axios";
 import router from "@/router";
+import {GlobalConstants} from "@/Common/global-constants"
 
 const email = ref('');
 const password = ref('');
@@ -24,7 +25,7 @@ const handleSubmit = async () => {
 };
 
 const register = async () => {
-  const url = "https://projectapi.thibautstachnick.com";
+  const url = GlobalConstants.baseUrl
   try {
     const response = await axios.post(`${url}/api/register`, {
       email: email.value,
@@ -61,10 +62,10 @@ const register = async () => {
       <label for="dropdown" class="block text-sm font-medium text-gray-700">Role :</label>
       <select id="dropdown" v-model="selectedOption" class="input-text mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
         <option value="" disabled>Role</option>
-        <option value="Coordinate">Coordinate</option>
-        <option value="Artiste">Artiste</option>
-        <option value="Spectator">Spectator</option>
-        <option value="Place owner">Place owner</option>
+        <option value="organizer">Coordinate</option>
+        <option value="artist">Artiste</option>
+        <option value="spectator">Spectator</option>
+        <option value="place owner">Place owner</option>
       </select>
     </div>
     <div class="flex justify-center div-button-form">

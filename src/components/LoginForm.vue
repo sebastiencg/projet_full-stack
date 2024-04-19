@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import axios from "axios";
 import router from "@/router";
-
+import {GlobalConstants} from "@/Common/global-constants"
 const email = ref('');
 const password = ref('');
 
@@ -12,7 +12,7 @@ const handleSubmit = async () => {
   try {
     const response = await login();
     localStorage.setItem('bearerToken', response.data.token);
-    await router.push('/login');
+    await router.push('/');
 
   } catch (error) {
     console.error("Erreur lors du login :", error);
@@ -20,7 +20,8 @@ const handleSubmit = async () => {
 };
 
 const login = async () => {
-  const url = "https://projectapi.thibautstachnick.com";
+  const url = GlobalConstants.baseUrl;
+
   try {
     const response = await axios.post(`${url}/api/login_check`, {
       email: email.value,
@@ -99,6 +100,7 @@ const login = async () => {
 }
 .submit-button{
   background: #6E7DAB;
+
 }
 .logo-register{
   padding-bottom: 25px;
