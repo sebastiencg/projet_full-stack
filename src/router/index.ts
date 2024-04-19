@@ -13,7 +13,12 @@ import TicketsComponent from "@/components/TicketsComponent.vue";
 import SuccessComponent from "@/components/SuccessComponent.vue";
 import DonationComponent from "@/components/DonationComponent.vue";
 import EventShowComponent from "@/components/EventShowComponent.vue";
+import ArtistShowComponent from "@/components/ArtistShowComponent.vue";
 import VenueIndexComponent from "@/components/VenueIndexComponent.vue";
+import CartComponent from "@/components/CartComponent.vue";
+import ScanQrComponent from "@/components/ScanQrComponent.vue";
+import EventCreateComponent from "@/components/EventCreateComponent.vue";
+import ErrorComponent from "@/components/ErrorComponent.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -31,8 +36,8 @@ const routes: Array<RouteRecordRaw> = [
     component: TicketsComponent
   },
   {
-    path: '/artist',
-    name: 'artist',
+    path: '/artists',
+    name: 'artists',
     component: ArtistComponent
   },
   {
@@ -91,6 +96,29 @@ const routes: Array<RouteRecordRaw> = [
     path: '/event/show',
     name: 'eventShow',
     component: EventShowComponent
+  },
+  {
+    path: "/artist/show",
+    component: ArtistShowComponent
+  },
+  {
+    path: "/cart",
+    component: CartComponent
+  },
+  {
+    path: '/scan-QrCode',
+    name: 'scanQrCode',
+    component: ScanQrComponent
+  },
+  {
+    path: '/error',
+    name: 'error',
+    component: ErrorComponent
+  },
+  {
+    path: '/event/create',
+    name: 'event/create',
+    component: EventCreateComponent
   },
 ];
 
